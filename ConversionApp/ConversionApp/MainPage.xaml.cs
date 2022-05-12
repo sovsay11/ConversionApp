@@ -10,6 +10,9 @@ namespace ConversionApp
 {
   public partial class MainPage : ContentPage
   {
+    // stuff to go over:
+    // Basics of XAML
+    // Basics of C# and tying stuff together
     public MainPage()
     {
       InitializeComponent();
