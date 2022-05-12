@@ -13,6 +13,7 @@ namespace ConversionApp
     // stuff to go over:
     // Basics of XAML
     // Basics of C# and tying stuff together
+    // Go over page navigation later?
     public MainPage()
     {
       InitializeComponent();
