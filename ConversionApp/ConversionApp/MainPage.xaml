@@ -3,44 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConversionApp.MainPage">
 
-  <StackLayout BackgroundColor="LightGray">
-    <!--Go over layouts (stack and grid for now)-->
-    <!--Stack layout here-->
-    <StackLayout x:Name="StackLayoutMain" IsVisible="True">
-      <!--Basic controls-->
-      <Label Text="Welcome to the Unit Conversion App!"
-             FontSize="Title"/>
-      <Label Text="Convert feet to meters" />
-      <Entry Placeholder="Enter a number" />
-      <Button Text="Convert" 
-              CornerRadius="10"/>
-      <Label Text="Convert Fahrenheit to Celsius" />
-      <Entry Placeholder="Enter a number" />
-      <Button Text="Convert" />
-      <Picker Title="Placeholder for pickers">
-        <Picker.Items>
-          <x:String></x:String>
-        </Picker.Items>
-      </Picker>
-      <!--Placeholder and text changing properties for the editor-->
-      <Editor Placeholder="Editor placeholder" AutoSize="TextChanges"/>
-      <!--Move on to if/else stuff (picker and more simplified layout)-->
-    </StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <!--Go over layouts (stack and grid for now)-->
+            <!--Stack layout here-->
+            <StackLayout x:Name="StackLayoutMain"
+                         IsVisible="True">
+                <!--Basic controls-->
+                <Label Text="Welcome to the Unit Conversion App!"
+                       FontSize="Title"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold" />
+                <Label Text="Convert feet to meters"
+                       FontSize="Subtitle"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" />
+                <Frame CornerRadius="10"
+                       Margin="10"
+                       BorderColor="Black">
+                    <Entry x:Name="EntLengthValue"
+                           Placeholder="Enter a number"
+                           HorizontalTextAlignment="Center"
+                           Keyboard="Numeric" />
+                </Frame>
+                <Frame CornerRadius="10"
+                       Margin="10"
+                       BorderColor="Black">
+                    <Label x:Name="LblConvertedLength"
+                           Text="Results..." />
+                </Frame>
+                <Button x:Name="BtnConvertLength"
+                        Text="Convert"
+                        CornerRadius="10"
+                        Margin="10"
+                        BorderColor="Black"
+                        BorderWidth="1"
+                        Clicked="BtnConvertLength_Clicked" />
 
-    <!--Going over grids-->
-    <Grid IsVisible="False">
-      <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-      </Grid.RowDefinitions>
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*" />
-        <ColumnDefinition Width="*" />
-      </Grid.ColumnDefinitions>
-    </Grid>
+                <Label Text="Convert Fahrenheit to Celcius"
+                       FontSize="Subtitle"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" />
+                <Frame CornerRadius="10"
+                       Margin="10"
+                       BorderColor="Black">
+                    <Entry x:Name="EntTempValue"
+                           Placeholder="Enter a temperature"
+                           HorizontalTextAlignment="Center"
+                           Keyboard="Numeric" />
+                </Frame>
+                <Frame CornerRadius="10"
+                       Margin="10"
+                       BorderColor="Black">
+                    <Label x:Name="LblConvertedTemp"
+                           Text="Results..." />
+                </Frame>
+                <Button x:Name="BtnConvertTemp"
+                        Text="Convert"
+                        CornerRadius="10"
+                        Margin="10"
+                        BorderColor="Black"
+                        BorderWidth="1"
+                        Clicked="BtnConvertTemp_Clicked" />
 
-    <!--The default code, delete later-->
-    <!--<Frame BackgroundColor="#2196F3"
+                <!--Optional controls-->
+                <Picker Title="Placeholder for pickers">
+                    <Picker.Items>
+                        <x:String>Heyo</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Editor Placeholder="Editor placeholder"
+                        AutoSize="TextChanges" />
+            </StackLayout>
+
+            <!--Going over grids-->
+            <Grid IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <!--The default code, delete later-->
+            <!--<Frame BackgroundColor="#2196F3"
            Padding="24"
            CornerRadius="0">
       <Label Text="Welcome to Xamarin.Forms!"
@@ -66,5 +115,6 @@
         </FormattedString>
       </Label.FormattedText>
     </Label>-->
-  </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
