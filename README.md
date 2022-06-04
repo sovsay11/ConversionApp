@@ -39,7 +39,7 @@ This application was created to showcase the basics of C# and Xamarin.
 
 ### Image of the UI:
 <p align="center">
-<img src="[ConversionApp.png](https://github.com/sovsay11/sovsay11/blob/992f9d3b57806caacf9dc194d4aaffe6bc37ec70/ConversionApp.png)" alt="Image of Conversion App" height="50%" width="50%"/>
+<img src="https://github.com/sovsay11/sovsay11/blob/master/ConversionApp.png" alt="Image of Conversion App" height="50%" width="50%"/>
 </p> 
 
 ## Contact
