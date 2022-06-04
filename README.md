@@ -24,6 +24,9 @@ Alternatively, you can also press the green code button and copy the HTTPS Git l
   <li>
     Install <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio<a> (any version will work)
   </li>
+    <li>
+    A mobile device or emulator
+  </li>
 </ul>
 
 ### Installation
